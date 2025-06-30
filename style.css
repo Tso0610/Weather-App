@@ -17,7 +17,7 @@ nav {
     align-items: center;
     justify-content: space-around;
     color: white;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
     
 }
 .logo {
@@ -69,9 +69,77 @@ nav {
     width: 40%;
     height: 400px;
     border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: aliceblue;
 }
 
+.title-weather {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.weather-img {
+    display: flex;
+    align-items: center;
+    margin-top: 10%;
+    padding: 10px;
+}
+
+.line1 {
+    margin-bottom: 40px;
+}
+.weather-img img {
+    width: 20%;
+    height: auto;
+}
+
+.weather-img p {
+    font-size: 80px;
+    font-weight: 800;
+}
+
+.weather > p {
+    font-size: 30px;
+    margin-left: 25px;
+    font-size: 600;
+}
+
+.weather-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.weather {
+    width: 50%;
+}
+
+
+.weather-details {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.weather-details p {
+    margin: 20px 0;
+}
+
+h2 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+.weather-detail-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.weather-detail-item .detail {
+    margin-right: 10px;
+}
