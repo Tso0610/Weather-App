@@ -13,48 +13,51 @@
             <p>Weather App</p>
         </div>
         <div class="search">
-            <input type="search" placeholder="Please enter city.">
-            <button><img src="https://img.icons8.com/?size=100&id=Y6AAeSVIcpWt&format=png&color=000000" alt="" id="search"></button>
+            <input id="city-input" type="search" placeholder="Please enter city.">
+            <button id="city-input-btn" onclick="weather($('#city-input').val())"><img src="https://img.icons8.com/?size=100&id=Y6AAeSVIcpWt&format=png&color=000000" alt="" id="search"></button>
         </div>
     </nav>
-    <h2>City</h2>
+    <h2 id="city-name"></h2>
     <div class="weather-box">
     
         <div class="title-weather">
             <p>CURRENT WEATHER</p>
-            <p>8:00 PM</p>
+            <p id="time">8:00 PM</p>
         </div>
         <hr class="line1">
         <div class="weather-container">
             
             <div class="weather">
                 <div class="weather-img">
-                    <img src="https://img.icons8.com/?size=100&id=8EUmYhfLPTCF&format=png&color=000000" alt="">
-                    <p>26°C</p>
+                    <div class="icon"><img src="https://img.icons8.com/?size=100&id=8EUmYhfLPTCF&format=png&color=000000" alt="" id="weather-icon"></div>
+                    <p id="temperature"></p>
                 </div>
-                <p>Sunny</p>
+                <p id="weather-desc">Sunny</p>
             </div>
             <div class="weather-details">
                 <div class="weather-detail-item">
                     <p>Feels like:</p>
-                    <p class="detail">26°C</p>
+                    <p class="detail" id="temp-feels-like">26°C</p>
                 </div>
                 <hr>
                 <div class="weather-detail-item">
                     <p>Wind Speed:</p>
-                    <p class="detail">2 meter/sec</p>
+                    <p class="detail" id="wind-speed">2 meter/sec</p>
                 </div>
                 <hr>
                 <div class="weather-detail-item">
                     <p>Humidity:</p>
-                    <p class="detail">4%</p>
+                    <p class="detail" id="humidity">4%</p>
                 </div>
                 <hr>
                 <div class="weather-detail-item">
                     <p>Visibility:</p>
-                    <p class="detail">10 km</p>
+                    <p class="detail" id="visibility">10 km</p>
                 </div>
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="index.js"></script>
+</body>
 </html>
