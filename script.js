@@ -4,16 +4,16 @@ const apiKey = "d00eee09bdc52166531f407b3a01211f";
 $(document).ready(function () {
     weather('Barrie');
 });
-let now = new Date();
-let hours = now.getHours();
-let minutes = now.getMinutes();
-let seconds = now.getSeconds();
+
 async function weather(cityName) {
     const fullURL = `${url}?q=${cityName}&appid=${apiKey}&units=metric`;
     try {
+        let now = new Date();
+        let hours = now.getHours();
+        let minutes = now.getMinutes();
+        let seconds = now.getSeconds();
         const res = await fetch(fullURL);
         const data = await res.json();
-        console.log(data.weather[0].description);
         if (res.ok) {
             weatherShow(data);
         }
@@ -36,6 +36,11 @@ function weatherShow(data) {
     $('#wind-speed').html(`${data.wind.speed} m/s`);
     $('#humidity').html(`${data.main.humidity} %`);
     $('#visibility').html(`${data.visibility / 1000} km`);
-    $('#time').html(`${hours}:${minutes}:${seconds}`);
 }
 
+function updateTime() {
+  const now = new Date();
+  document.getElementById('time').innerHTML = now.toLocaleTimeString();
+}
+
+setInterval(updateTime, 1000);
